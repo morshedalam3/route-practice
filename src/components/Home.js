@@ -12,9 +12,11 @@ const Home = () => {
     return (
         <div>
             <h1>This is home</h1>
+            <div className="row">
             {
                 country.map(country => <Countries country ={country}></Countries>)
             }
+            </div>
         </div>
     );
 };
