@@ -13,12 +13,10 @@ const Countries = (props) => {
     }
 
     const styleCountry = {
-        backgroundColor: 'purple',
         borderRadius: '5px',
         margin: '20px',
-        padding: '20px',
-        height: '400px',
-        width: '300px'
+        padding: '30px',
+      
     }
     const button = {
         backgroundColor: 'red',
@@ -31,38 +29,21 @@ const Countries = (props) => {
 
     }
     return (
-
-        // <div style={{marginLeft: '60px'}}>
-        //     <div style={styleCountry}>
-        //     <Card style={{ width: '25rem' }}>
-        //     <Card.Img style={{height:'200px',}} variant="top" src={flag} />
-        //     <Card.Body>
-        //         <Card.Title>Name: {name}</Card.Title>
-        //         <Card.Text>
-                    
-        //         </Card.Text>
-        //         <Button variant="primary" onClick={() => handleClick(name)}>Show Detail</Button>
-        //     </Card.Body>
-        // </Card>
-        // </div>
-        // </div>
-
-
-         <section style={{marginLeft: '100px'}}>
-               <div className="col-md-3">
-                <div style={styleCountry}>
+         
+               <div style={styleCountry} className="col-md-3">
+            
                 <div>
-                    <img  style={{height:'150px',width:'200px'}} src={flag} alt=""/>
+                    <img className="img-fluid" src={flag} alt=""/>
                 </div>
-                <div style={{marginLeft:'20px',marginTop:'40px'}}>
+
+                <div>
                     <h4>Name: {name}</h4>
                     <h5>Capital: {capital}</h5>
                     {/* <p><Link to={`country/${name}`}>show detail</Link></p> */}
                     <button style={button} onClick={() => handleClick(name)}>Show Detail</button>
                 </div>
-            </div>
+            
            </div>
-         </section>
     );
 };
 

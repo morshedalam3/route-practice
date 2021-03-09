@@ -12,23 +12,26 @@ const CountryDetail = () => {
       .then(data => setCountry(data[0])) 
   }, [])
     return (
-        <div>
-            <div>
-                <p><img src={country.flag} alt=""/></p>
-            </div>
-            <div>
-            <h1>name: {name}</h1>
-            </div>
-           <div>
-    
-                <p>Capital: {country.capital}</p>
-                <p>Region: {country.region}</p>
-                <p>Area: {country.area}</p>
-                <p>Population: {country.population}</p>
-            
-           </div>
         
+             <div>
+               <div className="container my-5">
+              <div className="row">
+            <div className="col-md-6">
+                <p><img className="img-fluid" src={country.flag} alt=""/></p>
+            </div>
+            <div className="col-md-6">
+            <h1>name: {name}</h1>
+            <ul>
+             <li>Capital: {country.capital}</li>
+                <li>Region: {country.region}</li>
+                <li>Area: {country.area}</li>
+                <li>Population: {country.population}</li>
+            </ul>
+                
+            </div>
         </div>
+             </div>
+             </div>
     );
 };
 

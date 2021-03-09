@@ -11,12 +11,15 @@ const Home = () => {
   }, [])
     return (
         <div>
-            <h1>This is home</h1>
-            <div className="row">
+            <h1 style={{textAlign: 'center', backgroundColor: 'black', color: 'white'}}>All countries: {country.length}</h1>
+            <div className="container">
+            <div className="row my-5">
             {
                 country.map(country => <Countries country ={country}></Countries>)
             }
             </div>
+            </div>
+           
         </div>
     );
 };
